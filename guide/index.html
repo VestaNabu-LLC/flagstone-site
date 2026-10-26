@@ -1,0 +1,68 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flagstone Guide</title><meta name="description" content="How to set up and use Flagstone for Confluence: My work, Team, Comments, the page badge, the report macro and the admin page. What it reads and stores."><meta name="theme-color" content="#070a12">
+<link rel="canonical" href="https://flagstone.monaidea.com/guide/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236366f1'/%3E%3Cg fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round' transform='translate(4 4) scale(.75)'%3E%3Cpath d='M9 28V5'/%3E%3Cpath d='M9 6c2.6-1.6 5.4-1.6 8 0s5.4 1.6 8 0v11c-2.6 1.6-5.4 1.6-8 0s-5.4-1.6-8 0'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css"></head><body>
+<div class="sky" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<nav><div class="nav-in"><a class="brand" href="/"><span class="mark"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 28V5"/><path d="M9 6c2.6-1.6 5.4-1.6 8 0s5.4 1.6 8 0v11c-2.6 1.6-5.4 1.6-8 0s-5.4-1.6-8 0"/></svg></span>Flagstone<small>by Monaidea</small></a><div class="nav-links"><a href="/">Overview</a><a href="/guide/" aria-current="page">Guide</a><a href="/support/">Support</a></div></div></nav>
+<main>
+<div class="doc-head"><span class="eyebrow"><i></i>Documentation</span><h1>Flagstone <span class="grad">guide</span></h1>
+<p class="lede">How to set up and use Flagstone, the read-only hub for the open tasks and unresolved inline comments across your Confluence spaces, and what it reads and stores.</p>
+<p class="doc-meta">Updated 26 October 2026. Flagstone is in development and not on the Atlassian Marketplace yet.</p></div>
+<div class="doc"><nav class="toc" aria-label="Contents"><b>Contents</b><ol>
+<li><a href="#start">Getting started</a></li><li><a href="#work">My work</a></li><li><a href="#team">Team</a></li><li><a href="#comments">Comments</a></li><li><a href="#all">All tasks</a></li><li><a href="#badge">The page badge</a></li><li><a href="#macro">The report macro</a></li><li><a href="#admin">The admin page</a></li><li><a href="#reminders">Why no reminders?</a></li><li><a href="#data">What it reads and stores</a></li><li><a href="#licence">Licence and pricing</a></li><li><a href="#help">Help</a></li></ol></nav>
+<article>
+<h2 id="start">Getting started</h2>
+<ol class="steps">
+<li><b>Install</b><span>A Confluence administrator installs Flagstone on your Confluence Cloud site from its Atlassian Marketplace listing. It asks only for read access to spaces, pages, comments and tasks. There is nothing to configure.</span></li>
+<li><b>Open it</b><span>In Confluence, open <strong>Apps</strong> in the main menu and choose <strong>Flagstone</strong>. The first time, Confluence asks you to let Flagstone read Confluence as you; accept to continue.</span></li>
+<li><b>Work from it</b><span>The four tiles at the top count your open tasks, your overdue tasks, your tasks due in the next 7 days and the unresolved comments you can see. Click a tile to open its view. <strong>Refresh</strong> reads everything again.</span></li>
+</ol>
+<div class="note"><strong>Each person sees only what Confluence lets them see.</strong> Flagstone reads tasks, comments and pages as the person looking, with their own permissions, so a task or comment on a page you cannot open never appears.</div>
+
+<h2 id="work">My work</h2>
+<p>Your open tasks from every space, in groups: <strong>Overdue</strong>, <strong>Due today</strong>, <strong>Next 7 days</strong>, <strong>Later</strong> and <strong>No due date</strong>. The switch at the top changes between tasks <strong>assigned to me</strong> and tasks <strong>created by me</strong>.</p>
+<p>Each row shows the task as it reads in Confluence (with its mentions and dates), where it lives (space and page), who has it and a due label: red when late ("3 days late"), amber when due today or soon, grey with no date. <strong>Open in Confluence</strong> takes you to the page, where you tick the task as usual.</p>
+<p>When a list is very long, a tile can show a number with a plus sign, for example "250+": Flagstone stopped reading at its limit and the real number is higher.</p>
+
+<h2 id="team">Team</h2>
+<p>Open tasks per person, for everything you can see: open, overdue (in red when above 0), due in the next 7 days and a bar for the overdue share, sorted by overdue first. A <strong>Nobody assigned</strong> row lists tasks without an assignee. Choose a space to narrow it, and <strong>View tasks</strong> to see one person's tasks in the My work groups.</p>
+
+<h2 id="comments">Comments</h2>
+<p>Unresolved inline comments, grouped by page, oldest first. Each shows its text, the words it is about and its author, with an age label: <span class="sev new">New</span> under 7 days, <span class="sev med">Waiting</span> 7 to 30 days, <span class="sev high">Stale</span> over 30 days. Filters: a space, <strong>On pages I created</strong> and <strong>Stale only</strong>. The link opens that comment on its page.</p>
+
+<h2 id="all">All tasks</h2>
+<p>Every open task you can see, overdue first, with a space filter and an <strong>Overdue only</strong> switch.</p>
+
+<h2 id="badge">The page badge</h2>
+<p>Under the title of every page, in the byline, Flagstone adds <strong>Tasks and comments</strong>. Its label counts that page's open items, for example "3 open · 1 overdue · 2 comments", or says "All clear". Click it to see the page's open tasks and unresolved comments, with a link to the full hub. The counts are kept for five minutes, so a busy page does not ask Confluence again on every view.</p>
+
+<h2 id="macro">The report macro</h2>
+<p>Put a live list on a team page or in meeting notes: while editing a page, type <strong>/</strong> and choose <strong>Flagstone report</strong>. Settings:</p>
+<ul><li><strong>Spaces:</strong> leave empty for all, or pick some.</li><li><strong>Whose:</strong> mine (tasks assigned to me, comments on pages I created) or anyone.</li><li><strong>What:</strong> tasks, unresolved comments or both.</li><li><strong>When:</strong> overdue, due in the next 7 days, or all open (applies to tasks).</li></ul>
+<p>Each person who reads the page sees the list with their own permissions. It shows up to 15 rows per list, with <strong>See all in Flagstone</strong> for the rest.</p>
+
+<h2 id="admin">The admin page</h2>
+<p>Confluence administrators find Flagstone in <strong>Confluence settings</strong> (the gear). It shows counts per space (open tasks, overdue tasks, unresolved comments), the trend of open and overdue tasks over the last scans, overdue tasks by space, unresolved comments by age, and any spaces Flagstone could not read, for example because an app access rule blocks them. These counts come from a scan that runs about once a week as the app; the trend needs two scans.</p>
+
+<h2 id="reminders">Why no reminders?</h2>
+<p>Flagstone never sends email or Slack messages: your data stays inside Atlassian ("Runs on Atlassian"). If you want reminders, the <strong>Tell us</strong> link in the app opens an email to us; we count every request.</p>
+
+<h2 id="data">What it reads and stores</h2>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Topic</th><th>Flagstone</th></tr></thead><tbody>
+<tr><td>Access</td><td>Read-only: spaces, pages, comments and tasks, plus its own storage. It cannot change Confluence.</td></tr>
+<tr><td>Reads as you</td><td>Everything shown on the hub, the badge and the macro, with your own permissions.</td></tr>
+<tr><td>Reads as the app</td><td>The weekly scan for the admin page, which keeps counts only.</td></tr>
+<tr><td>Stores</td><td>Counts per space, the counts of earlier scans, and each page's badge counts for five minutes, in Atlassian's cloud with your site's data residency. No task or comment text, no page titles, no names, account IDs or email addresses.</td></tr>
+<tr><td>Sends elsewhere</td><td>Nothing. No outside servers, analytics or third parties.</td></tr>
+<tr><td>Uninstall</td><td>Deletes what it stored, under Atlassian's Forge data lifecycle.</td></tr>
+</tbody></table></div>
+
+<h2 id="licence">Licence and pricing</h2>
+<p>Planned for the Marketplace listing, as for our app Ledgerstone: free for sites with up to 10 users, then $1.50 per user per month, billed by the Atlassian Marketplace, with a 30-day free trial. Once it is listed, a site without an active licence or trial will see "Flagstone is not licensed on this site" with a link to Manage apps, and Flagstone will read nothing there.</p>
+
+<h2 id="help">Help</h2>
+<p>Write to <a href="mailto:support@monaidea.com?subject=Flagstone%3A%20support">support@monaidea.com</a> with your Confluence site address; we reply within two business days. See also the <a href="/support/">support page</a>.</p>
+</article></div></main>
+<footer><div class="foot"><span>© 2026 VestaNabu LLC</span><a href="/">Flagstone</a><a href="/guide/">Guide</a><a href="/support/">Support</a><a href="https://ledgerstone.monaidea.com/">Ledgerstone</a><a href="https://www.monaidea.com/">Monaidea</a><a href="mailto:support@monaidea.com">support@monaidea.com</a><span class="r">Independent apps for Atlassian Cloud. Not affiliated with Atlassian.</span></div></footer>
+<script src="/site.js" defer></script></body></html>
